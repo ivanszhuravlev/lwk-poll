@@ -1,20 +1,26 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {SafeAreaView, StatusBar} from 'react-native';
 
 import {Provider} from 'react-redux';
-import {store} from './src/store/store';
+import {store, useDispatch} from './src/store/store';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
 import {ChatScreen} from './src/screens/ChatScreen';
 import {CreatePollScreen} from './src/screens/CreatePollScreen';
+import {getChatsAction} from './src/store/stores/chats/chatsActions';
 
 export type IAppStack = {
-  Chat: {id: string};
+  Chat: undefined;
   CreatePoll: undefined;
 };
 
 const App = () => {
+  const dispatch = useDispatch();
   const Stack = createStackNavigator<IAppStack>();
+
+  useEffect(() => {
+    dispatch(getChatsAction());
+  }, [dispatch]);
 
   return (
     <Provider store={store}>

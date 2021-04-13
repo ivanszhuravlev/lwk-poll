@@ -1,6 +1,8 @@
 import {
   configureStore,
   ThunkAction as ThunkActionDefault,
+  Action,
+  ThunkDispatch,
 } from '@reduxjs/toolkit';
 import {
   TypedUseSelectorHook,
@@ -20,9 +22,15 @@ export const store = configureStore({
 
 export type RootStore = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
-export type ThunkAction<R> = ThunkActionDefault<R, RootStore, any, any>;
+export type ThunkAction<R> = ThunkActionDefault<
+  R,
+  RootStore,
+  null,
+  Action<string>
+>;
 
-export const useDispatch = () => useDispatchDefault<AppDispatch>();
+export const useDispatch = () =>
+  useDispatchDefault<ThunkDispatch<RootStore, null, Action<string>>>();
 export const useSelector: TypedUseSelectorHook<RootStore> = (
   store,
   equalityFn = isEqual,

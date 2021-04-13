@@ -1,8 +1,8 @@
 import {Context, useContext} from 'react';
 import baseStyled, {
-  ThemedStyledInterface,
   ThemeContext as BaseThemeContext,
-} from 'styled-components';
+  ReactNativeStyledInterface,
+} from 'styled-components/native';
 import {getThemeColors} from './colors';
 
 export const THEME = {
@@ -37,7 +37,7 @@ export const THEME = {
 };
 
 export type ITheme = typeof THEME;
-export const styled = baseStyled as ThemedStyledInterface<ITheme>;
+export const styled = (baseStyled as unknown) as ReactNativeStyledInterface<ITheme>;
 export const useTheme = () => {
   return useContext(BaseThemeContext as Context<ITheme>);
 };
