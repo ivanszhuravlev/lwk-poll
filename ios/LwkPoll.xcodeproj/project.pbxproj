@@ -11,6 +11,9 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		49B8EDD626264B60005B53FF /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49B8EDD326264B60005B53FF /* Poppins-Medium.ttf */; };
+		49B8EDD726264B60005B53FF /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49B8EDD426264B60005B53FF /* Poppins-Regular.ttf */; };
+		49B8EDD826264B60005B53FF /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49B8EDD526264B60005B53FF /* Poppins-SemiBold.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		AF0BC921CD1505D76A0D6B3D /* libPods-LwkPoll.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2100025FB2D48A457B948CFD /* libPods-LwkPoll.a */; };
 		BB3F4D49279B9ACA46A6D8A6 /* libPods-LwkPoll-LwkPollTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5177DA2402A8F84BA08D7FF2 /* libPods-LwkPoll-LwkPollTests.a */; };
@@ -38,6 +41,9 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = LwkPoll/main.m; sourceTree = "<group>"; };
 		2100025FB2D48A457B948CFD /* libPods-LwkPoll.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LwkPoll.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		265BA8DCE3002D8896E26932 /* Pods-LwkPoll-LwkPollTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LwkPoll-LwkPollTests.debug.xcconfig"; path = "Target Support Files/Pods-LwkPoll-LwkPollTests/Pods-LwkPoll-LwkPollTests.debug.xcconfig"; sourceTree = "<group>"; };
+		49B8EDD326264B60005B53FF /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		49B8EDD426264B60005B53FF /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		49B8EDD526264B60005B53FF /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		5177DA2402A8F84BA08D7FF2 /* libPods-LwkPoll-LwkPollTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LwkPoll-LwkPollTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = LwkPoll/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB485F500B3C52EFD755979A /* Pods-LwkPoll.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LwkPoll.release.xcconfig"; path = "Target Support Files/Pods-LwkPoll/Pods-LwkPoll.release.xcconfig"; sourceTree = "<group>"; };
@@ -106,6 +112,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		49B8EDD226264B3F005B53FF /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				49B8EDD326264B60005B53FF /* Poppins-Medium.ttf */,
+				49B8EDD426264B60005B53FF /* Poppins-Regular.ttf */,
+				49B8EDD526264B60005B53FF /* Poppins-SemiBold.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +132,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				49B8EDD226264B3F005B53FF /* fonts */,
 				13B07FAE1A68108700A75B9A /* LwkPoll */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* LwkPollTests */,
@@ -145,7 +162,6 @@
 				265BA8DCE3002D8896E26932 /* Pods-LwkPoll-LwkPollTests.debug.xcconfig */,
 				F686630654ECD4EC1D90763C /* Pods-LwkPoll-LwkPollTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -243,8 +259,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49B8EDD826264B60005B53FF /* Poppins-SemiBold.ttf in Resources */,
+				49B8EDD626264B60005B53FF /* Poppins-Medium.ttf in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				49B8EDD726264B60005B53FF /* Poppins-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
