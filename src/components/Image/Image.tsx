@@ -1,10 +1,14 @@
-import {ImageProps, Image as ImageNative} from 'react-native';
+import React from 'react';
+import {
+  ImageProps as ImageNativeProps,
+  Image as ImageNative,
+} from 'react-native';
 
-interface Props extends ImageProps {
+export interface ImageProps extends Omit<ImageNativeProps, 'source'> {
   uri: string;
 }
 
-export const Image = ({uri, ...props}: Props) => {
+export const Image = ({uri, ...props}: ImageProps) => {
   const source = {uri};
 
   return <ImageNative source={source} {...props} />;

@@ -7,6 +7,9 @@ import {getThemeColors} from './colors';
 
 export const THEME = {
   colors: getThemeColors(),
+  constants: {
+    statusBarHeight: 44,
+  },
   borderRadius: {
     group: 18,
     block: 15,

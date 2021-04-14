@@ -1,4 +1,6 @@
-import {MessageStyles} from './MessageStyles';
+import React from 'react';
+import {MessageStyles} from './Message.styles';
+import {Pic} from '../Image/Pic';
 
 interface Props {
   title: string;
@@ -9,7 +11,7 @@ interface Props {
 export const Message = ({title, text, pic}: Props) => {
   return (
     <MessageStyles.Container>
-      <MessageStyles.Pic source={{uri: ''}} />
+      <Pic uri={pic} />
       <MessageStyles.Aside>
         <MessageStyles.Title>{title}</MessageStyles.Title>
         <MessageStyles.Text>{text}</MessageStyles.Text>

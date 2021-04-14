@@ -4,27 +4,32 @@ const users: IUser[] = [
   {
     id: 'u1',
     name: 'Clara Oswald',
-    avatar: '',
+    avatar:
+      'https://images.freeimages.com/images/large-previews/1c1/face-nervous-1511394.jpg',
   },
   {
     id: 'u2',
     name: 'Edwin Bass',
-    avatar: '',
+    avatar:
+      'https://images.freeimages.com/images/large-previews/d47/my-father-1439504.jpg',
   },
   {
     id: 'u3',
     name: 'David Bowie',
-    avatar: '',
+    avatar:
+      'https://images.freeimages.com/images/large-previews/2b2/eyes-1-1436207.jpg',
   },
   {
     id: 'u4',
     name: 'Kelley Hodges',
-    avatar: '',
+    avatar:
+      'https://images.freeimages.com/images/large-previews/f6d/young-woman-5-1434130.jpg',
   },
   {
     id: 'u5',
     name: 'Jared Phillips',
-    avatar: '',
+    avatar:
+      'https://images.freeimages.com/images/large-previews/ad8/portrait-3-1437903.jpg',
   },
 ];
 

@@ -1,3 +1,4 @@
+import React from 'react';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {RouteProp} from '@react-navigation/native';
 import {IAppStack} from '../../App';
