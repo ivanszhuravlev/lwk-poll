@@ -34,12 +34,12 @@ const HeadingContent = styled.View`
 
 const Title = styled.Text`
   font-family: ${({theme}) => theme.fonts.bold};
-  font-size: ${({theme}) => theme.fontSize.title};
+  font-size: ${({theme}) => theme.fontSize.title}px;
   color: ${({theme}) => theme.colors.text};
 `;
 const Subtitle = styled.Text`
   font-family: ${({theme}) => theme.fonts.regular};
-  font-size: ${({theme}) => theme.fontSize.small};
+  font-size: ${({theme}) => theme.fontSize.small}px;
   color: ${({theme}) => theme.colors.textGreyed};
 `;
 

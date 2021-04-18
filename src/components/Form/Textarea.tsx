@@ -10,7 +10,7 @@ const StyledInput = styled.TextInput.attrs<TextInputProps>(({theme}) => ({
 }))`
   color: ${({theme}) => theme.colors.text};
   font-family: ${({theme}) => theme.fonts.regular};
-  font-size: ${({theme}) => theme.fontSize.text};
+  font-size: ${({theme}) => theme.fontSize.text}px;
   margin-top: -6px;
 `;
 

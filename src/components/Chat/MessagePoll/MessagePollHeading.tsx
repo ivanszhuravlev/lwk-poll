@@ -43,7 +43,7 @@ const TypeOfPoll = styled.Text`
 `;
 const Author = styled.Text`
   font-family: ${({theme}) => theme.fonts.bold};
-  font-size: ${({theme}) => theme.fontSize.small};
+  font-size: ${({theme}) => theme.fontSize.small}px;
   color: ${({theme}) => theme.colors.text};
   margin-top: 2px;
 `;
@@ -65,11 +65,11 @@ const PicStyled = styled(Pic)`
 
 const VotesCount = styled.Text`
   font-family: ${({theme}) => theme.fonts.bold};
-  font-size: ${({theme}) => theme.fontSize.title};
+  font-size: ${({theme}) => theme.fontSize.title}px;
   color: ${({theme}) => theme.colors.text};
 `;
 const VotesLabel = styled.Text`
   font-family: ${({theme}) => theme.fonts.regular};
-  font-size: ${({theme}) => theme.fontSize.tiny};
+  font-size: ${({theme}) => theme.fontSize.tiny}px;
   color: ${({theme}) => theme.colors.text};
 `;

@@ -40,6 +40,6 @@ const IconStyled = styled(Icon)`
 
 const Label = styled.Text`
   font-family: ${({theme}) => theme.fonts.medium};
-  font-size: ${({theme}) => theme.fontSize.medium};
+  font-size: ${({theme}) => theme.fontSize.medium}px;
   color: ${({theme}) => theme.colors.text};
 `;

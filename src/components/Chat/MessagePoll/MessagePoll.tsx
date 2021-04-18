@@ -39,7 +39,7 @@ export const MessagePoll = ({question, options, user, isPublic}: Props) => {
 
   const renderOption = (option: {id: number; text: string}) => {
     return (
-      <Option>
+      <Option key={`${option.id}`}>
         <OptionLabel>{option.text}</OptionLabel>
       </Option>
     );

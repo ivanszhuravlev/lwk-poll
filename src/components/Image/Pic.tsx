@@ -7,7 +7,7 @@ export const Pic = (props: ImageProps) => {
 };
 
 const StyledImage = styled(Image)`
-  border-radius: ${({theme}) => theme.borderRadius.pic};
+  border-radius: ${({theme}) => theme.borderRadius.pic}px;
   width: 40px;
   height: 40px;
 `;

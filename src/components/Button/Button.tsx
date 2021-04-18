@@ -18,7 +18,7 @@ export const Button = ({label, style, onPress}: Props) => {
 
 const Label = styled.Text`
   font-family: ${({theme}) => theme.fonts.regular};
-  font-size: ${({theme}) => theme.fontSize.text};
+  font-size: ${({theme}) => theme.fontSize.text}px;
   color: ${({theme}) => theme.colors.blueLight};
 `;
 
