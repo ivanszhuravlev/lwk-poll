@@ -44,6 +44,7 @@
 		49B8EDD326264B60005B53FF /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		49B8EDD426264B60005B53FF /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		49B8EDD526264B60005B53FF /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		49B8EF52262AA991005B53FF /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MaterialIcons.ttf; path = "../../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		5177DA2402A8F84BA08D7FF2 /* libPods-LwkPoll-LwkPollTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LwkPoll-LwkPollTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = LwkPoll/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB485F500B3C52EFD755979A /* Pods-LwkPoll.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LwkPoll.release.xcconfig"; path = "Target Support Files/Pods-LwkPoll/Pods-LwkPoll.release.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +119,7 @@
 				49B8EDD326264B60005B53FF /* Poppins-Medium.ttf */,
 				49B8EDD426264B60005B53FF /* Poppins-Regular.ttf */,
 				49B8EDD526264B60005B53FF /* Poppins-SemiBold.ttf */,
+				49B8EF52262AA991005B53FF /* MaterialIcons.ttf */,
 			);
 			path = fonts;
 			sourceTree = "<group>";

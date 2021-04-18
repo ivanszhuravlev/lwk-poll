@@ -1,21 +1,25 @@
 import React from 'react';
-import {HeaderStyles} from './Header.styles';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
+import {HeaderStyles} from './Header.styles';
+import {ViewStyle} from 'react-native';
+import {HeaderContent} from './HeaderContent';
 
 type renderProp = () => React.ReactNode;
 
 interface Props {
-  renderCenter?: renderProp;
   renderRightButton?: renderProp;
-  renderLeftButton?: renderProp;
   isSafe?: boolean;
+  title: string;
+  subtitle?: string;
+  style?: ViewStyle;
 }
 
 export const Header = ({
-  renderCenter,
   renderRightButton,
-  renderLeftButton,
   isSafe,
+  title,
+  subtitle,
+  style,
 }: Props) => {
   const safeAreaInsets = useSafeAreaInsets();
   const dynamicStyle = {
@@ -23,12 +27,14 @@ export const Header = ({
   };
 
   return (
-    <HeaderStyles.Container style={dynamicStyle}>
-      <HeaderStyles.Content>
-        {renderCenter && renderCenter()}
-        {renderLeftButton && renderLeftButton()}
-        {renderRightButton && renderRightButton()}
-      </HeaderStyles.Content>
-    </HeaderStyles.Container>
+    <HeaderStyles.Wrapper style={dynamicStyle}>
+      <HeaderStyles.Container style={style}>
+        <HeaderContent
+          renderRightButton={renderRightButton}
+          title={title}
+          subtitle={subtitle}
+        />
+      </HeaderStyles.Container>
+    </HeaderStyles.Wrapper>
   );
 };

@@ -30,10 +30,16 @@ export const ChatsStore = createSlice({
         {} as IChatCollection,
       );
     },
+    addMessage: (
+      state,
+      {payload}: PayloadAction<{chatId: string; message: IMessage}>,
+    ) => {
+      state.chats[payload.chatId].messages.push(payload.message);
+    },
   },
 });
 
-export const {setChats} = ChatsStore.actions;
+export const {setChats, addMessage} = ChatsStore.actions;
 
 export interface IUser {
   id: string;
@@ -46,4 +52,8 @@ export interface IMessage {
   text: string;
   type: 'text' | 'poll';
   user: IUser;
+  options?: {
+    id: number;
+    text: string;
+  }[];
 }

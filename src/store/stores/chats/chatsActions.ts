@@ -6,3 +6,5 @@ export const getChatsAction = (): ThunkAction<void> => dispatch => {
   // let's pretend there is something asynchronous :)
   dispatch(setChats(mockChats));
 };
+
+export const sendMessage = (): ThunkAction<void> => dispatch => {};

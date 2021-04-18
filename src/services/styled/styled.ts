@@ -1,4 +1,5 @@
 import {Context, useContext} from 'react';
+import {Dimensions} from 'react-native';
 import baseStyled, {
   ThemeContext as BaseThemeContext,
   ReactNativeStyledInterface,
@@ -9,6 +10,7 @@ export const THEME = {
   colors: getThemeColors(),
   constants: {
     statusBarHeight: 44,
+    deviceWidth: Dimensions.get('window').width,
   },
   borderRadius: {
     group: 18,
@@ -16,14 +18,18 @@ export const THEME = {
     pic: 13,
     max: 100,
     interactable: 12,
+    input: 10,
+    card: 25,
   },
   offset: {
     huge: 25,
     big: 20,
     medium: 15,
+    medium2: 18,
     small: 12,
     smallest: 10,
     tiny: 8,
+    tiniest: 7,
   },
   fonts: {
     medium: 'Poppins-Medium',

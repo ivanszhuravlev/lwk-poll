@@ -1,6 +1,6 @@
 import {IChat, IUser} from '../store/stores/chats/chatsStore';
 
-const users: IUser[] = [
+export const mockUsers: IUser[] = [
   {
     id: 'u1',
     name: 'Clara Oswald',
@@ -42,38 +42,38 @@ export const mockChats: IChat[] = [
     messages: [
       {
         id: 'm1',
-        user: users[0],
+        user: mockUsers[0],
         type: 'text',
         text: 'Hi everyone!!!',
       },
       {
         id: 'm2',
-        user: users[0],
+        user: mockUsers[0],
         type: 'text',
         text:
           'I’m in also! Mike’s Diner would be a good choice 🔥🔥🔥how about everyone else? Any ideas?',
       },
       {
         id: 'm3',
-        user: users[1],
+        user: mockUsers[1],
         type: 'text',
         text: 'Sounds good to me!!!',
       },
       {
         id: 'm4',
-        user: users[2],
+        user: mockUsers[2],
         type: 'text',
         text: '@kellyhodges are you in???',
       },
       {
         id: 'm5',
-        user: users[3],
+        user: mockUsers[3],
         type: 'text',
         text: 'Nice! 12 ppl in total. Let’s gather at the metro station!🚆🚆🚆',
       },
       {
         id: 'm6',
-        user: users[4],
+        user: mockUsers[4],
         type: 'text',
         text: 'Okie dokie!!',
       },

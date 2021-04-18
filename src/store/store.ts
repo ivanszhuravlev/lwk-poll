@@ -12,10 +12,12 @@ import {
 import {isEqual} from 'lodash';
 import {ChatsStore} from './stores/chats/chatsStore';
 import thunk from 'redux-thunk';
+import {CreatePollStore} from './stores/createPoll/createPollStore';
 
 export const store = configureStore({
   reducer: {
     chatsStore: ChatsStore.reducer,
+    createPollStore: CreatePollStore.reducer,
   },
   middleware: [thunk],
 });
