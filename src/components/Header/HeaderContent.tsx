@@ -24,16 +24,20 @@ export const HeaderContent = ({
 
   return (
     <HeaderStyles.Content style={style}>
-      <HeaderStyles.BackButton onPress={onBackPress}>
-        <HeaderStyles.BackIcon name={'close'} size={18} />
-      </HeaderStyles.BackButton>
+      <HeaderStyles.Left>
+        <HeaderStyles.BackButton onPress={onBackPress}>
+          <HeaderStyles.BackIcon name={'close'} size={18} />
+        </HeaderStyles.BackButton>
+      </HeaderStyles.Left>
       <HeaderStyles.HeadingContent>
         <HeaderStyles.Title>{title}</HeaderStyles.Title>
         {subtitle ? (
           <HeaderStyles.Subtitle>{subtitle}</HeaderStyles.Subtitle>
         ) : null}
       </HeaderStyles.HeadingContent>
-      {renderRightButton && renderRightButton()}
+      <HeaderStyles.Right>
+        {renderRightButton && renderRightButton()}
+      </HeaderStyles.Right>
     </HeaderStyles.Content>
   );
 };

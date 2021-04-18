@@ -28,9 +28,7 @@ const BackIcon = styled(Icon)`
 `;
 
 const HeadingContent = styled.View`
-  top: 0;
-  left: 0;
-  flex: 1;
+  flex: 3;
   align-items: center;
 `;
 
@@ -45,6 +43,16 @@ const Subtitle = styled.Text`
   color: ${({theme}) => theme.colors.textGreyed};
 `;
 
+const Left = styled.View`
+  flex: 1;
+  align-items: flex-start;
+`;
+
+const Right = styled.View`
+  flex: 1;
+  align-items: flex-end;
+`;
+
 export const HeaderStyles = {
   Wrapper,
   Container,
@@ -54,4 +62,6 @@ export const HeaderStyles = {
   Title,
   Subtitle,
   Content,
+  Left,
+  Right,
 };
