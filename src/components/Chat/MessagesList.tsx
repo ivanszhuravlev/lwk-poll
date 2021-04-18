@@ -24,6 +24,7 @@ export const MessagesList = ({chat}: Props) => {
           question={item.text}
           options={item.options}
           user={item.user}
+          isPublic={item.isPublic}
         />
       ),
     [],

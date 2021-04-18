@@ -10,6 +10,7 @@ import {
   removeOption,
   editOption,
   setQuestion,
+  setIsPublic,
 } from '../../store/stores/createPoll/createPollStore';
 import {ButtonIconSwitch} from '../Button/ButtonIconSwitch';
 
@@ -45,6 +46,9 @@ export const FormCreatePoll = () => {
     />
   );
 
+  const onToggleIsPublic = (isAnonymous: boolean) =>
+    dispatch(setIsPublic(!isAnonymous));
+
   return (
     <FormCreatePollStyles.Container>
       <FormCreatePollStyles.Block>
@@ -78,7 +82,7 @@ export const FormCreatePoll = () => {
         <ButtonIconSwitch
           iconName={'verified-user'}
           label={'Anonymous voting'}
-          onToggle={() => null}
+          onToggle={onToggleIsPublic}
         />
       </FormCreatePollStyles.Block>
       <FormCreatePollStyles.Block>

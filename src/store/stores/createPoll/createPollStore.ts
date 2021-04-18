@@ -14,12 +14,14 @@ interface IOption {
 interface ICreatePollState {
   options: IOption[];
   question: string;
+  isPublic: boolean;
   greatestId: number;
 }
 
 const initialState: ICreatePollState = {
   options: [],
   question: '',
+  isPublic: true,
   greatestId: 0,
 };
 
@@ -43,14 +45,17 @@ export const CreatePollStore = createSlice({
       state,
       {payload}: PayloadAction<{id: number; text: string}>,
     ) => {
-      console.log('EDIT OPTION', payload);
       const index = state.options.findIndex(({id}) => id === payload.id);
 
       state.options[index].text = payload.text;
     },
+    setIsPublic: (state, {payload}: PayloadAction<boolean>) => {
+      state.isPublic = payload;
+    },
     clearForm: state => {
       state.options = initialState.options;
       state.question = initialState.question;
+      state.isPublic = initialState.isPublic;
       state.greatestId = initialState.greatestId;
     },
   },
@@ -62,6 +67,7 @@ export const {
   setQuestion,
   editOption,
   clearForm,
+  setIsPublic,
 } = CreatePollStore.actions;
 
 export const selectQuestion = ({createPollStore}: RootStore) =>
@@ -89,6 +95,7 @@ export const createPollAction = (chatId: string): ThunkAction<void> => (
     text: question,
     type: 'poll',
     user: mockUsers[0],
+    isPublic: state.createPollStore.isPublic,
     options,
   };
 

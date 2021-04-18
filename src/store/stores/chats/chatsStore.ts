@@ -52,6 +52,7 @@ export interface IMessage {
   text: string;
   type: 'text' | 'poll';
   user: IUser;
+  isPublic?: boolean;
   options?: {
     id: number;
     text: string;
