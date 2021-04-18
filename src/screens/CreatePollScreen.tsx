@@ -18,7 +18,7 @@ interface Props {
   route: RouteProp<IAppStack, 'CreatePoll'>;
 }
 
-export const CreatePollScreen = ({route}: Props) => {
+export const CreatePollScreen = ({route, navigation}: Props) => {
   const chatId = route.params.chatId;
   const theme = useTheme();
   const dispatch = useDispatch();
@@ -38,7 +38,12 @@ export const CreatePollScreen = ({route}: Props) => {
     [theme.colors.blueGradient, theme.colors.main2Transparent],
   );
 
-  const createPoll = () => dispatch(createPollAction(chatId));
+  const createPoll = () => {
+    try {
+      dispatch(createPollAction(chatId));
+      navigation.goBack();
+    } catch {}
+  };
 
   const renderCreateButton = () => (
     <TextButton label={'Create'} onPress={createPoll} />

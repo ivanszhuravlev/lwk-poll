@@ -80,8 +80,8 @@ export const createPollAction = (chatId: string): ThunkAction<void> => (
 
   const isEachOptionValid = options.every(({text}) => text.trim().length > 0);
 
-  if (!isEachOptionValid || !question.trim().length) {
-    return;
+  if (!isEachOptionValid || !question.trim().length || !options.length) {
+    throw new Error();
   }
 
   const message: IMessage = {
