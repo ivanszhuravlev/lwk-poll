@@ -9,9 +9,15 @@ export interface IColors {
   blueGradient: string;
   main2Transparent: string;
   blueLight: string;
-  blueLightTransparent: string;
+  blueLightTransparent1: string;
+  blueLightTransparent2: string;
   blueLightAlpha: string;
   white: string;
+  purpleGradient: string;
+  purpleSoftGradient: string;
+  purpleLightGradient: string;
+  blueGreyGradient: string;
+  purple: string;
 }
 
 const COLORS_LIGHT: IColors = {
@@ -23,9 +29,15 @@ const COLORS_LIGHT: IColors = {
   blueGradient: '#2467F41F',
   main2Transparent: '#14131B00',
   blueLight: '#1C6EF2',
-  blueLightTransparent: '#1C6EF200',
+  blueLightTransparent1: '#1C6EF200',
+  blueLightTransparent2: '#1C6EF226',
   blueLightAlpha: '#1C6EF21A',
   white: '#FFFFFF',
+  purpleGradient: '#A83D7F',
+  purpleSoftGradient: '#6F1D7A81',
+  purpleLightGradient: '#4C097734',
+  blueGreyGradient: '#03114398',
+  purple: '#AC1393',
 };
 
 const COLORS_DARK: IColors = {
@@ -37,9 +49,15 @@ const COLORS_DARK: IColors = {
   blueGradient: '#2467F41F',
   main2Transparent: '#14131B00',
   blueLight: '#1C6EF2',
-  blueLightTransparent: '#1C6EF200',
+  blueLightTransparent1: '#1C6EF200',
+  blueLightTransparent2: '#1C6EF226',
   blueLightAlpha: '#1C6EF21A',
   white: '#FFFFFF',
+  purpleGradient: '#A83D7F',
+  purpleSoftGradient: '#6F1D7A81',
+  purpleLightGradient: '#4C097734',
+  blueGreyGradient: '#03114398',
+  purple: '#AC1393',
 };
 
 const getIsDarkTheme = () => Appearance.getColorScheme() === 'dark';

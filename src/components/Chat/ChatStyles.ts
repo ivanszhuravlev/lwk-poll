@@ -8,5 +8,5 @@ const Screen = styled.View`
 
 export const ChatStyles = {
   Screen,
-  containerStyle: {paddingTop: THEME.offset.medium},
+  containerStyle: {paddingTop: THEME.offset.medium, paddingBottom: 100},
 };

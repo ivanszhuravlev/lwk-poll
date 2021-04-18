@@ -4,6 +4,7 @@ import {FlatList, ListRenderItem} from 'react-native';
 import {ChatStyles} from './ChatStyles';
 import {useCallback} from 'react';
 import {Message} from './Message';
+import {MessagePoll} from './MessagePoll/MessagePoll';
 
 interface Props {
   chat: IChat;
@@ -11,9 +12,20 @@ interface Props {
 
 export const MessagesList = ({chat}: Props) => {
   const renderItem: ListRenderItem<IMessage> = useCallback(
-    ({item}) => (
-      <Message text={item.text} title={item.user.name} pic={item.user.avatar} />
-    ),
+    ({item}) =>
+      item.type === 'text' ? (
+        <Message
+          text={item.text}
+          title={item.user.name}
+          pic={item.user.avatar}
+        />
+      ) : (
+        <MessagePoll
+          question={item.text}
+          options={item.options}
+          user={item.user}
+        />
+      ),
     [],
   );
 
